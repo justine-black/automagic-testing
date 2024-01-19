@@ -4,7 +4,7 @@
 Follow the installation and setup guide here:
 - https://realpython.com/installing-python/
 
-I've had a few online trainings for Python and highly recommend these ones specially for beginners:
+I've undergone several online training sessions for Python and highly recommend these, especially for beginners:
 - [Python Essential Training in LinkedIn Learning](https://www.linkedin.com/learning/python-essential-training-18764650)
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 
