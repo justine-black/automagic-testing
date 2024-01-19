@@ -9,7 +9,7 @@ I've had a few online trainings for Python and highly recommend these ones speci
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 
 ## Scripts and Demo Videos
-Under the Python directory, you can see the source code of the scripts I wrote to demo automation.
+Within this Python directory, you can find the source code for the scripts I authored to demonstrate automation
 
 ### Tweeting with Python and Selenium
 source code: [tweet.py](tweet.py)
