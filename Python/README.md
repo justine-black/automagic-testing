@@ -14,3 +14,4 @@ Under the Python directory, you can see the source code of the scripts I wrote t
 ### Tweeting with Python and Selenium
 source code: [tweet.py](tweet.py)
 
+https://github.com/justine-black/automagic-testing/assets/78810708/2c086400-167a-4df2-9647-5d653ef87ce3
