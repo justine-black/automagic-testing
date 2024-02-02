@@ -7,6 +7,7 @@ I'm an ISTQB-certified QA Engineer with 5 years of experience successfully colla
 [LinkedIn](https://www.linkedin.com/in/justine-bea%C3%B1o/)
 
 ## What's in here?
+A collection of scripts using various programming languages, frameworks, and tools for test and process automation. You may also find demo video recordings of the scripts running.
 ### Python
 When seeking the best programming language to learn, Python almost always tops the list. It is highly recommended, especially for beginners, due to its gentle learning curve and remarkable versatility.
 
