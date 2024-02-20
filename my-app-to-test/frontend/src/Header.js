@@ -11,6 +11,20 @@ import githubLogo from "./assets/images/github-logo.png";
 import linkedinLogo from "./assets/images/linkedin-logo.png";
 import reactLogo from "./assets/images/react-logo.png";
 
+const links = [
+  { label: "Learn React", logo: reactLogo, url: "https://react.dev/learn" },
+  {
+    label: "My LinkedIn Profile",
+    logo: linkedinLogo,
+    url: "https://www.linkedin.com/in/justine-bea%C3%B1o/",
+  },
+  {
+    label: "My Github Portfolio",
+    logo: githubLogo,
+    url: "https://github.com/justine-black/automagic-testing",
+  },
+];
+
 const Header = () => {
   return (
     <AppBar position="sticky" sx={{ bgcolor: "#04314c" }}>
@@ -30,28 +44,19 @@ const Header = () => {
               textDecoration: "none",
             }}
           >
-            AUTOMAGIC TEST APP
+            Automagic Test App
           </Typography>
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <Button
-              startIcon={<Avatar src={reactLogo} />}
-              href="https://react.dev/learn"
-            >
-              LEARN REACT
-            </Button>
-            <Button
-              startIcon={<Avatar src={linkedinLogo} />}
-              href="https://www.linkedin.com/in/justine-bea%C3%B1o/"
-            >
-              MY LINKEDIN PROFILE
-            </Button>
-            <Button
-              startIcon={<Avatar src={githubLogo} />}
-              href="https://github.com/justine-black/automagic-testing"
-            >
-              MY GITHUB PORTFOLIO
-            </Button>
+            {links.map((link) => (
+              <Button
+                sx={{ textTransform: "none" }}
+                startIcon={<Avatar src={link.logo} />}
+                href={link.url}
+              >
+                {link.label}
+              </Button>
+            ))}
           </Box>
         </Toolbar>
       </Container>

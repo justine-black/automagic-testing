@@ -27,3 +27,5 @@ Navigate to the [Python](Python) subdirectory to see some of my progress with Py
 React.js is a popular JavaScript library known for its efficiency and flexibility in building user interfaces. Its component-based architecture fosters reusability and simplifies the development process, while its virtual DOM ensures optimal performance by minimizing unnecessary updates. With a vibrant community and extensive documentation, React.js empowers developers to create dynamic and interactive web applications with ease.
 
 Navigate to the [my-app-to-test](my-app-to-test/frontend/) subdirectory where you will find a simple web application powered by React.js with Material-UI. I created this app to practice the fundamentals of web development as well as of test automation.
+
+The app is also deployed on Netlify: https://automagic-test-app.netlify.app/

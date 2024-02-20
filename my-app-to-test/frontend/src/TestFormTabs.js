@@ -50,6 +50,7 @@ export default function BasicTabs() {
   };
 
   const StyledTab = styled(Tab)({
+    textTransform: "none",
     "&": {
       color: "white",
       fontSize: 18,
@@ -72,7 +73,7 @@ export default function BasicTabs() {
           centered
           sx={{ bgcolor: "#04314c" }}
         >
-          <StyledTab label="Sign In" {...a11yProps(0)} />
+          <StyledTab label="Sign In" {...a11yProps(0)} trans />
           <StyledTab label="Sign Up" {...a11yProps(1)} />
           <StyledTab label="Forgot Password" {...a11yProps(2)} />
           <StyledTab label="About Me" {...a11yProps(3)} />
