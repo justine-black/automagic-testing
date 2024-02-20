@@ -22,7 +22,7 @@ function CustomTabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ marginTop: 3, p: 3 }}>
+        <Box sx={{ p: 3 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -52,8 +52,7 @@ export default function BasicTabs() {
   const StyledTab = styled(Tab)({
     "&": {
       color: "white",
-      // fontWeight: "bold",
-      fontSize: 20,
+      fontSize: 18,
     },
   });
 
@@ -69,7 +68,7 @@ export default function BasicTabs() {
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          aria-label="form example tabs"
           centered
           sx={{ bgcolor: "#04314c" }}
         >

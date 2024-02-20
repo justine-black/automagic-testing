@@ -1,24 +1,14 @@
-import Header, { NewHeader } from "./Header";
+import Header from "./Header";
 import "./App.css";
-import Body, { NewBody } from "./Body";
+import Body from "./Body";
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="new-app">
       <Header />
       <Body />
     </div>
   );
 };
 
-const NewApp = () => {
-  return (
-    <div className="new-app">
-      <NewHeader />
-      <NewBody />
-    </div>
-  );
-};
-
-export { App };
-export default NewApp;
+export default App;

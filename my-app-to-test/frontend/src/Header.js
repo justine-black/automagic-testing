@@ -7,21 +7,11 @@ import {
   Button,
   Avatar,
 } from "@mui/material";
-import logo from "./logo.svg";
 import githubLogo from "./assets/images/github-logo.png";
 import linkedinLogo from "./assets/images/linkedin-logo.png";
 import reactLogo from "./assets/images/react-logo.png";
 
 const Header = () => {
-  return (
-    <header className="app-header">
-      <img src={logo} className="app-logo" alt="logo" />
-      <p>Welcome to my React App!</p>
-    </header>
-  );
-};
-
-const NewHeader = () => {
   return (
     <AppBar position="sticky" sx={{ bgcolor: "#04314c" }}>
       <Container maxWidth="xl">
@@ -69,5 +59,4 @@ const NewHeader = () => {
   );
 };
 
-export { NewHeader };
 export default Header;

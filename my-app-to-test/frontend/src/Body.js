@@ -1,20 +1,7 @@
 import { Grid, Paper, Typography } from "@mui/material";
-// import Grid from "@mui/material/Unstable_Grid2";
 import BasicTabs from "./TestFormTabs";
 
 const Body = () => {
-  return (
-    <div className="app-body">
-      <p className="text-body">
-        This is a simple app that may be used to practice and demonstrate the
-        fundamentals of test automation and of web development
-      </p>
-      <BasicTabs />
-    </div>
-  );
-};
-
-const NewBody = () => {
   return (
     <Grid container spacing={2} className="new-app-body" paddingTop={2}>
       <Grid item xs={12} background={"none"}>
@@ -32,10 +19,10 @@ const NewBody = () => {
             justifyContent={"center"}
             textAlign={"center"}
           >
-            <Grid item>
+            <Grid item marginX={5}>
               <Typography
                 variant="h2"
-                fontFamily={"roboto"}
+                fontFamily={"sans-serif"}
                 fontWeight={"bold"}
               >
                 Welcome to my Practice React App!
@@ -66,5 +53,4 @@ const NewBody = () => {
   );
 };
 
-export { NewBody };
 export default Body;
