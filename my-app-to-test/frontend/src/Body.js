@@ -7,14 +7,14 @@ const NewBody = () => {
       container
       spacing={2}
       className="app-body"
-      paddingTop={1}
+      paddingTop={10}
       justifyContent={"center"}
       textAlign={"center"}
     >
       <Grid item xs={6} background={"none"}>
         <Grid
           container
-          spacing={1}
+          spacing={3}
           alignItems={"center"}
           justifyContent={"center"}
         >
