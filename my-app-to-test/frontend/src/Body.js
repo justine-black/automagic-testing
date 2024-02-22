@@ -59,7 +59,7 @@ const NewBody = () => {
       container
       spacing={2}
       className="app-body"
-      paddingTop={10}
+      paddingTop={1}
       justifyContent={"center"}
       textAlign={"center"}
     >

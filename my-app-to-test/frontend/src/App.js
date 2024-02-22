@@ -14,7 +14,7 @@ const App = () => {
 
 const NewApp = () => {
   return (
-    <Box className="new-app" sx={{ overflowY: "hidden" }}>
+    <Box className="new-app">
       <NewHeader />
       <NewBody />
     </Box>

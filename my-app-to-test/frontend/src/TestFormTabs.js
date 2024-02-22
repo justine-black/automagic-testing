@@ -22,7 +22,7 @@ function CustomTabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 1 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -127,42 +127,40 @@ export function NewBasicTabs() {
   });
 
   return (
-    <div>
-      <Box
-        sx={{
-          margin: "0 auto",
-          background: "rgba(255,255,255,0.5)",
-          minHeight: "300px",
-        }}
-      >
-        <Box display={"flex"} justifyContent={"center"} padding={3}>
-          <StyledTabs
-            value={value}
-            onChange={handleChange}
-            aria-label="form example tabs"
-            centered
-          >
-            <StyledTab label="Sign In" {...a11yProps(0)} trans />
-            <StyledTab label="Sign Up" {...a11yProps(1)} />
-            <StyledTab label="Forgot Password" {...a11yProps(2)} />
-            <StyledTab label="About Me" {...a11yProps(3)} />
-          </StyledTabs>
-        </Box>
-        <Box justifyContent={"center"}>
-          <CustomTabPanel value={value} index={0}>
-            <SignIn handleChange={handleChange} />
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={1}>
-            <SignUp handleChange={handleChange} />
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={2}>
-            <ForgotPassword handleChange={handleChange} />
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={3}>
-            <Profile handleChange={handleChange} />
-          </CustomTabPanel>
-        </Box>
+    <Box
+      sx={{
+        margin: "0 auto",
+        background: "rgba(255,255,255,0.5)",
+        minHeight: "300px",
+      }}
+    >
+      <Box display={"flex"} justifyContent={"center"} padding={2}>
+        <StyledTabs
+          value={value}
+          onChange={handleChange}
+          aria-label="form example tabs"
+          centered
+        >
+          <StyledTab label="Sign In" {...a11yProps(0)} trans />
+          <StyledTab label="Sign Up" {...a11yProps(1)} />
+          <StyledTab label="Forgot Password" {...a11yProps(2)} />
+          <StyledTab label="About Me" {...a11yProps(3)} />
+        </StyledTabs>
       </Box>
-    </div>
+      <Box justifyContent={"center"}>
+        <CustomTabPanel value={value} index={0}>
+          <SignIn handleChange={handleChange} />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={1}>
+          <SignUp handleChange={handleChange} />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={2}>
+          <ForgotPassword handleChange={handleChange} />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={3}>
+          <Profile handleChange={handleChange} />
+        </CustomTabPanel>
+      </Box>
+    </Box>
   );
 }
