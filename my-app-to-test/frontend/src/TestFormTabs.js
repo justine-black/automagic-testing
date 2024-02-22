@@ -8,7 +8,7 @@ import { styled } from "@mui/material/styles";
 import SignIn from "./SignIn";
 import ForgotPassword from "./ForgotPassword";
 import SignUp from "./SignUp";
-import AboutMe from "./AboutMe";
+import Profile from "./Profile";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -90,9 +90,79 @@ export default function BasicTabs() {
           <ForgotPassword handleChange={handleChange} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={3}>
-          <AboutMe handleChange={handleChange} />
+          <Profile handleChange={handleChange} />
         </CustomTabPanel>
       </Box>
     </Box>
+  );
+}
+
+export function NewBasicTabs() {
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const StyledTab = styled(Tab)({
+    textTransform: "none",
+    "&": {
+      color: "gray",
+      fontSize: 20,
+      fontWeight: "lighter",
+    },
+    "&.Mui-selected": {
+      color: "black",
+      borderRadius: 100,
+      background: "white",
+    },
+  });
+
+  const StyledTabs = styled(Tabs)({
+    "& .MuiTabs-indicator": {
+      display: "none",
+    },
+    borderRadius: 100,
+    background: "#F2F2F2",
+    padding: 5,
+  });
+
+  return (
+    <div>
+      <Box
+        sx={{
+          margin: "0 auto",
+          background: "rgba(255,255,255,0.5)",
+          minHeight: "300px",
+        }}
+      >
+        <Box display={"flex"} justifyContent={"center"} padding={3}>
+          <StyledTabs
+            value={value}
+            onChange={handleChange}
+            aria-label="form example tabs"
+            centered
+          >
+            <StyledTab label="Sign In" {...a11yProps(0)} trans />
+            <StyledTab label="Sign Up" {...a11yProps(1)} />
+            <StyledTab label="Forgot Password" {...a11yProps(2)} />
+            <StyledTab label="About Me" {...a11yProps(3)} />
+          </StyledTabs>
+        </Box>
+        <Box justifyContent={"center"}>
+          <CustomTabPanel value={value} index={0}>
+            <SignIn handleChange={handleChange} />
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={1}>
+            <SignUp handleChange={handleChange} />
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={2}>
+            <ForgotPassword handleChange={handleChange} />
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={3}>
+            <Profile handleChange={handleChange} />
+          </CustomTabPanel>
+        </Box>
+      </Box>
+    </div>
   );
 }

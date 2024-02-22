@@ -11,7 +11,7 @@ import { Link } from "@mui/material";
 
 const defaultTheme = createTheme();
 
-export default function AboutMe(props) {
+export default function Profile(props) {
   const { handleChange } = props;
 
   const handleSigninClick = () => {
