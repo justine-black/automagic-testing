@@ -12,8 +12,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-![alt text](image.png)
+![image](https://github.com/justine-black/automagic-testing/assets/78810708/1e1a675b-b5ec-49a6-a071-7e235b835afd)
 
-The app has 4 different tab panels - Sign in, Sign up, Forgot Password, and About me - that I use to practice and demonstrate my automation skills.
+The app has 4 different tab panels - Sign in, Sign up, Forgot Password, and Profile - that I use to practice and demonstrate my automation skills.
 
 The app is also deployed on Netlify: https://automagic-test-app.netlify.app/
