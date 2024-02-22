@@ -40,14 +40,3 @@
   flex-direction: column;
   padding-inline: 10%;
 }
-
-.link-buttons {
-  width: 58px;
-  height: 58px;
-  min-width: 0;
-  padding: 8px;
-  margin-left: 6px;
-  margin-right: 6px;
-  border-radius: 50%;
-  background: white;
-}

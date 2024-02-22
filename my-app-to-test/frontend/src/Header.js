@@ -26,45 +26,6 @@ const links = [
   },
 ];
 
-const Header = () => {
-  return (
-    <AppBar position="sticky" sx={{ bgcolor: "#04314c" }}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            flexGrow={1}
-            variant="h4"
-            href="#"
-            component={"a"}
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Automagic Test App
-          </Typography>
-
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            {links.map((link) => (
-              <Button
-                sx={{ textTransform: "none" }}
-                startIcon={<Avatar src={link.logo} />}
-                href={link.url}
-              >
-                {link.label}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
-};
-
 const NewHeader = () => {
   return (
     <AppBar position="sticky" sx={{ bgcolor: "#F4F4F4" }}>
@@ -107,5 +68,44 @@ const NewHeader = () => {
   );
 };
 
-export default Header;
-export { NewHeader };
+const Header = () => {
+  return (
+    <AppBar position="sticky" sx={{ bgcolor: "#04314c" }}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Typography
+            flexGrow={1}
+            variant="h4"
+            href="#"
+            component={"a"}
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
+              fontWeight: 700,
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            Automagic Test App
+          </Typography>
+
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            {links.map((link) => (
+              <Button
+                sx={{ textTransform: "none" }}
+                startIcon={<Avatar src={link.logo} />}
+                href={link.url}
+              >
+                {link.label}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+};
+
+export default NewHeader;
+export { Header };

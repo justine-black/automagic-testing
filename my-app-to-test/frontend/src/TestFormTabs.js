@@ -43,7 +43,7 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
+export function BasicTabs() {
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -97,7 +97,7 @@ export default function BasicTabs() {
   );
 }
 
-export function NewBasicTabs() {
+export default function NewBasicTabs() {
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -144,7 +144,7 @@ export function NewBasicTabs() {
           <StyledTab label="Sign In" {...a11yProps(0)} trans />
           <StyledTab label="Sign Up" {...a11yProps(1)} />
           <StyledTab label="Forgot Password" {...a11yProps(2)} />
-          <StyledTab label="About Me" {...a11yProps(3)} />
+          <StyledTab label="Profile" {...a11yProps(3)} />
         </StyledTabs>
       </Box>
       <Box justifyContent={"center"}>
