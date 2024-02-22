@@ -1,6 +1,6 @@
-import NewHeader, { Header } from "./Header";
+import NewHeader from "./Header";
 import "./App.css";
-import NewBody, { Body } from "./Body";
+import NewBody from "./Body";
 import { Box } from "@mui/material";
 
 const App = () => {
