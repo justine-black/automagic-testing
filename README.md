@@ -29,3 +29,6 @@ React.js is a popular JavaScript library known for its efficiency and flexibilit
 Navigate to the [my-app-to-test](my-app-to-test/frontend/) subdirectory where you will find a simple web application powered by React.js with Material-UI. I created this app to practice the fundamentals of web development as well as of test automation.
 
 The app is also deployed on Netlify: https://automagic-test-app.netlify.app/
+
+![image](https://github.com/justine-black/automagic-testing/assets/78810708/b932433e-6072-4226-a1c9-17c597a73551)
+
