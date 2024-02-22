@@ -10,21 +10,51 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-// TODO remove, this demo shouldn't need to reset the theme.
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const defaultTheme = createTheme();
 
 export default function SignIn(props) {
   const { handleChange } = props;
-  const handleSubmit = (event) => {
+  const [openDialog, setOpenDialog] = React.useState(false);
+  const [loginState, setLoginState] = React.useState(false);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+
+    const email = data.get("email");
+    const password = data.get("password");
+
+    try {
+      const response = await fetch(apiUrl + "/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      setLoginState(response.ok);
+      setOpenDialog(true);
+
+      if (!response.ok) {
+        throw new Error("Login failed");
+      }
+
+      // Handle successful login (e.g., redirect to another page)
+      console.log("Login successful");
+    } catch (error) {
+      console.error("Error logging in:", error.message);
+      // Handle login error (e.g., display error message to the user)
+    }
   };
 
   const handleSignUpClick = () => {
@@ -33,6 +63,10 @@ export default function SignIn(props) {
 
   const handleForgotPasswordClick = () => {
     handleChange(null, 2);
+  };
+
+  const handleClose = () => {
+    setOpenDialog(false);
   };
 
   return (
@@ -125,6 +159,26 @@ export default function SignIn(props) {
           </Box>
         </Box>
       </Container>
+      <Dialog
+        open={openDialog}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {loginState ? "Login successful" : "Login failed"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            {loginState
+              ? "Close this dialog box to practice with more forms"
+              : "Email: test@test.com Password: testing123!"}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Close</Button>
+        </DialogActions>
+      </Dialog>
     </ThemeProvider>
   );
 }
