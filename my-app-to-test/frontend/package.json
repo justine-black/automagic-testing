@@ -40,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^13.6.5",
     "netlify-cli": "^17.16.3"
   }
 }
