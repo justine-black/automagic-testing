@@ -13,4 +13,6 @@ You may also use other API tools such as [Insomnia](https://insomnia.rest/), a l
 I created a collection of few requests for /login, /signup, and /forgot-password REST endpoints of my practice react app. Each request also includes tests such as status code, response time, and response body tests.
 
 Here's a demo of running the entire collection.
-![image](https://github.com/justine-black/automagic-testing/assets/78810708/4e116adf-b7cf-4262-ac80-ee3e52926b6f)
+
+https://github.com/justine-black/automagic-testing/assets/78810708/6ff0be18-f735-4421-9fb5-fcbc5754ccc0
+
