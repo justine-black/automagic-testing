@@ -12,7 +12,13 @@ I'm an ISTQB-certified QA Engineer with 5 years of experience successfully colla
 
 A collection of scripts using various programming languages, frameworks, and tools for test and process automation. You may also find demo video recordings of the scripts running.
 
-## Automation
+## Testing / Automation
+
+### Postman
+
+Postman is a versatile platform that simplifies API development and testing with intuitive tools for building, documenting, and sharing APIs. It excels in automating API tests, empowering teams to validate endpoints, assess performance, and generate comprehensive reports efficiently.
+
+Navigate to the [Postman](Postman) subdirectory that contains a sample collection of API tests for my practice react app.
 
 ### Python
 
@@ -31,4 +37,3 @@ Navigate to the [my-app-to-test](my-app-to-test/frontend/) subdirectory where yo
 The app is also deployed on Netlify: https://automagic-test-app.netlify.app/
 
 ![image](https://github.com/justine-black/automagic-testing/assets/78810708/b932433e-6072-4226-a1c9-17c597a73551)
-
