@@ -8,24 +8,55 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-// TODO remove, this demo shouldn't need to reset the theme.
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const defaultTheme = createTheme();
 
 export default function ForgotPassword(props) {
   const { handleChange } = props;
-  const handleSubmit = (event) => {
+  const [openDialog, setOpenDialog] = React.useState(false);
+  const [isValidEmail, setIsValidEmail] = React.useState(false);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-    });
+    const email = data.get("email");
+
+    try {
+      const response = await fetch(apiUrl + "/forgot-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      setIsValidEmail(response.ok);
+      setOpenDialog(true);
+
+      if (!response.ok) {
+        throw new Error("Login failed");
+      }
+
+      console.log("Login successful");
+    } catch (error) {
+      console.error("Error logging in:", error.message);
+    }
   };
 
   const handleSigninClick = () => {
     handleChange(null, 0);
+  };
+
+  const handleClose = () => {
+    setOpenDialog(false);
   };
 
   return (
@@ -47,12 +78,7 @@ export default function ForgotPassword(props) {
           <Typography variant="caption">
             Enter your email and we'll send you a link to reset your password
           </Typography>
-          <Box
-            component="form"
-            onSubmit={handleSubmit}
-            noValidate
-            sx={{ mt: 1 }}
-          >
+          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -89,6 +115,23 @@ export default function ForgotPassword(props) {
           </Box>
         </Box>
       </Container>
+      <Dialog
+        open={openDialog}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            {isValidEmail
+              ? "Password reset link was sent to your email"
+              : "The email address provided does not exist in our system"}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Close</Button>
+        </DialogActions>
+      </Dialog>
     </ThemeProvider>
   );
 }
