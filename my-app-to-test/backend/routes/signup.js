@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-// POST /login route handler
 router.post("/", (req, res) => {
   const { firstName, lastName, email, password, aboutMe } = req.body;
 
