@@ -8,28 +8,60 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-// TODO remove, this demo shouldn't need to reset the theme.
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const defaultTheme = createTheme();
 
 export default function SignUp(props) {
   const { handleChange } = props;
-  const handleSubmit = (event) => {
+
+  const [openDialog, setOpenDialog] = React.useState(false);
+  const [signupState, setSignupState] = React.useState(false);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      firstName: data.get("firstName"),
-      lastName: data.get("lastName"),
-      email: data.get("email"),
-      password: data.get("password"),
-      aboutMe: data.get("aboutMe"),
-    });
+
+    const firstName = data.get("firstName");
+    const lastName = data.get("lastName");
+    const email = data.get("email");
+    const password = data.get("password");
+    const aboutMe = data.get("aboutMe");
+
+    try {
+      const response = await fetch(apiUrl + "/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ firstName, lastName, email, password, aboutMe }),
+      });
+
+      setSignupState(response.ok);
+      setOpenDialog(true);
+
+      if (!response.ok) {
+        throw new Error("Signup failed");
+      }
+
+      console.log("Signup successful");
+    } catch (error) {
+      console.error("Error signing up:", error.message);
+    }
   };
 
   const handleSigninClick = () => {
     handleChange(null, 0);
+  };
+  const handleClose = () => {
+    setOpenDialog(false);
   };
 
   return (
@@ -48,12 +80,7 @@ export default function SignUp(props) {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box
-            component="form"
-            onSubmit={handleSubmit}
-            noValidate
-            sx={{ mt: 1 }}
-          >
+          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -131,7 +158,7 @@ export default function SignUp(props) {
               sx={{ mt: 3, mb: 2 }}
               data-testid="signup-submit"
             >
-              Sign In
+              Sign Up
             </Button>
             <Grid container justifyContent={"center"}>
               <Grid item>
@@ -146,6 +173,26 @@ export default function SignUp(props) {
           </Box>
         </Box>
       </Container>
+      <Dialog
+        open={openDialog}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {signupState ? "Signup successful" : "Signup failed"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            {signupState
+              ? "Close this dialog box to practice with more forms"
+              : "Something went wrong"}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Close</Button>
+        </DialogActions>
+      </Dialog>
     </ThemeProvider>
   );
 }
