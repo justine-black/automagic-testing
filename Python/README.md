@@ -13,6 +13,7 @@ I've undergone several online training sessions for Python and highly recommend 
 - [Python Essential Training in LinkedIn Learning](https://www.linkedin.com/learning/python-essential-training-18764650) - Learning the fundamentals of Python with a rockstar instructor!
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) - Learn the basic principle of automation with Python.
 - [Exercism](https://exercism.org/) - Learn Python interactively with fun exercises!
+- [Selenium](https://www.selenium.dev/documentation/webdriver/getting_started/install_library/) - Learn Selenium from its official website.
 
 ## Scripts and Demo Videos
 
