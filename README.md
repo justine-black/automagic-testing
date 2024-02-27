@@ -26,6 +26,13 @@ When seeking the best programming language to learn, Python almost always tops t
 
 Navigate to the [Python](Python) subdirectory to see some of my progress with Python.
 
+### JavaScript
+
+JavaScript is a versatile, high-level programming language commonly used for client-side web development. It may also widely used in test automation due to its ability to work seamlessly with testing frameworks like Selenium WebDriver and Jest, allowing developers to efficiently write and execute automated tests for web applications with ease.
+
+Navigate to the [JavaScript](JavaScript) subdirectory to join me in my automation journey with JavaScript. \
+I've also created my practice react app, [my-app-to-test](my-app-to-test/frontend/), with JavaScript.
+
 ## Web Development
 
 ### React.js
