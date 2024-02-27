@@ -23,3 +23,13 @@ Within this Python directory, you can find the source code for the scripts I aut
 source code: [tweet.py](tweet.py)
 
 https://github.com/justine-black/automagic-testing/assets/78810708/2c086400-167a-4df2-9647-5d653ef87ce3
+
+### Web Scraping with Selenium, requests, and BeautifulSoup
+
+source code: [webScraping.py](webScraping.py)
+
+Running `webScraping.get_categories()`
+
+Running `webScraping.get_all_books()`
+
+Running `webScraping.get_all_from_category(category)`
