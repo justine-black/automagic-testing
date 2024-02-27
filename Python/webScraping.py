@@ -7,8 +7,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
-
 class Book:
    def __init__(self, title, price, rating, availability):
       self.title = title
@@ -136,5 +134,3 @@ def get_all_from_category(category):
          return
    else:
       print("Invalid category")
-
-   pass
