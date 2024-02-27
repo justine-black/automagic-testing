@@ -30,6 +30,15 @@ source code: [webScraping.py](webScraping.py)
 
 Running `webScraping.get_categories()`
 
+https://github.com/justine-black/automagic-testing/assets/78810708/dec0b8a9-facb-4b0f-8617-117b3962e498
+
+
 Running `webScraping.get_all_books()`
 
+https://github.com/justine-black/automagic-testing/assets/78810708/b0da36af-2bfd-4bc4-aa73-b3fc42d17a99
+
+
 Running `webScraping.get_all_from_category(category)`
+
+https://github.com/justine-black/automagic-testing/assets/78810708/dac16728-fd73-4f5e-99e9-48c0b2b4c5aa
+
