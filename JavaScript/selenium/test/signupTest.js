@@ -2,7 +2,7 @@ const { By, Builder, until } = require("selenium-webdriver");
 const { describe, it, before, beforeEach, after } = require("mocha");
 const assert = require("assert");
 
-describe("Login Test", () => {
+describe("Signup Test", () => {
   let driver;
 
   before(async () => {
@@ -12,11 +12,11 @@ describe("Login Test", () => {
   beforeEach(async () => {
     await driver.get("https://automagic-test-app.netlify.app/");
 
-    let signinTab = await driver.findElement(
-      By.xpath("//button[contains(text(), 'Sign In') and @role='tab']")
+    let signupTab = await driver.findElement(
+      By.xpath("//button[contains(text(), 'Sign Up') and @role='tab']")
     );
 
-    await signinTab.click();
+    await signupTab.click();
   });
 
   after(async () => {
@@ -29,26 +29,37 @@ describe("Login Test", () => {
     assert.ok(pageTitle.includes("Automagic Test App"));
 
     let formTitle = await driver
-      .findElement(By.xpath("//*[@id='simple-tabpanel-0']/div/p/main/div/h1"))
+      .findElement(By.xpath("//*[@id='simple-tabpanel-1']/div/p/main/div/h1"))
       .getText();
 
-    assert.ok(formTitle.includes("Sign in"));
+    assert.ok(formTitle.includes("Sign up"));
   });
 
-  it("should be able to login with valid credentials", async () => {
+  it("should be able to signup with all required fields", async () => {
+    let firstNameInput = await driver.findElement(
+      By.xpath("//*[@data-testid='signup-firstname']")
+    );
+    let lastNameInput = await driver.findElement(
+      By.xpath("//*[@data-testid='signup-lastname']")
+    );
     let emailInput = await driver.findElement(
-      By.xpath("//input[@data-testid='signin-email']")
+      By.xpath("//*[@data-testid='signup-email']")
     );
     let passwordInput = await driver.findElement(
-      By.xpath("//input[@data-testid='signin-password']")
+      By.xpath("//*[@data-testid='signup-password']")
+    );
+    let aboutMeInput = await driver.findElement(
+      By.xpath("//*[@data-testid='signup-about']")
     );
     let submitButton = await driver.findElement(
-      By.xpath("//button[@data-testid='signin-submit']")
+      By.xpath("//button[@data-testid='signup-submit']")
     );
 
+    await firstNameInput.sendKeys("Tester");
+    await lastNameInput.sendKeys("McTest");
     await emailInput.sendKeys("test@test.com");
     await passwordInput.sendKeys("testing123!");
-
+    await aboutMeInput.sendKeys("Lorem ipsum");
     await submitButton.click();
 
     let dialogTitle = await driver
@@ -57,22 +68,22 @@ describe("Login Test", () => {
 
     //  let message = await dialogTitle.getText();
 
-    assert.equal("Login successful", dialogTitle);
+    assert.equal("Signup successful", dialogTitle);
   });
 
-  it("should not be able to login with invalid credentials", async () => {
+  it("should not be able to signup with missing required fields", async () => {
     let emailInput = await driver.findElement(
-      By.xpath("//input[@data-testid='signin-email']")
+      By.xpath("//*[@data-testid='signup-email']")
     );
     let passwordInput = await driver.findElement(
-      By.xpath("//input[@data-testid='signin-password']")
+      By.xpath("//*[@data-testid='signup-password']")
     );
     let submitButton = await driver.findElement(
-      By.xpath("//button[@data-testid='signin-submit']")
+      By.xpath("//button[@data-testid='signup-submit']")
     );
 
-    await emailInput.sendKeys("wrong@email.com");
-    await passwordInput.sendKeys("password");
+    await emailInput.sendKeys("test@test.com");
+    await passwordInput.sendKeys("testing123!");
 
     await submitButton.click();
 
@@ -83,6 +94,6 @@ describe("Login Test", () => {
 
     let message = await dialogTitle.getText();
 
-    assert.equal("Login failed", message);
+    assert.equal("Signup failed", message);
   });
 });

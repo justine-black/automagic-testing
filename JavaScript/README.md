@@ -18,3 +18,17 @@ Here are some resources I found helpful when I was getting started with JavaScri
 Within this Python directory, you can find the source code for the scripts I authored to demonstrate automation
 
 ### Selenium with JavaScript
+
+I've created a few automated test scripts with my practice react app, [Automagic Test App](../my-app-to-test/frontend), as my app under test.
+
+#### Login test
+
+source code: [loginTest.js](selenium/test/loginTest.js)
+
+#### Sign up test
+
+source code: [signupTest.js](selenium/test/signupTest.js)
+
+#### Forgot password test
+
+source code: [forgotPasswordTest.js](selenium/test/forgotPasswordTest.js)
