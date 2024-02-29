@@ -80,7 +80,12 @@ export default function SignUp(props) {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1 }}
+          >
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -186,7 +191,7 @@ export default function SignUp(props) {
           <DialogContentText id="alert-dialog-description">
             {signupState
               ? "Close this dialog box to practice with more forms"
-              : "Something went wrong"}
+              : "Something went wrong. Make sure to enter all required fields"}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
