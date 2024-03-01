@@ -73,10 +73,26 @@ export function BasicTabs() {
           centered
           sx={{ bgcolor: "#04314c" }}
         >
-          <StyledTab label="Sign In" {...a11yProps(0)} trans />
-          <StyledTab label="Sign Up" {...a11yProps(1)} />
-          <StyledTab label="Forgot Password" {...a11yProps(2)} />
-          <StyledTab label="About Me" {...a11yProps(3)} />
+          <StyledTab
+            label="Sign In"
+            {...a11yProps(0)}
+            data-testid="tab-signin"
+          />
+          <StyledTab
+            label="Sign Up"
+            {...a11yProps(1)}
+            data-testid="tab-signup"
+          />
+          <StyledTab
+            label="Forgot Password"
+            {...a11yProps(2)}
+            data-testid="tab-forgot"
+          />
+          <StyledTab
+            label="About Me"
+            {...a11yProps(3)}
+            data-testid="tab-about"
+          />
         </Tabs>
       </Box>
       <Box justifyContent={"center"}>
@@ -141,10 +157,26 @@ export default function NewBasicTabs() {
           aria-label="form example tabs"
           centered
         >
-          <StyledTab label="Sign In" {...a11yProps(0)} trans />
-          <StyledTab label="Sign Up" {...a11yProps(1)} />
-          <StyledTab label="Forgot Password" {...a11yProps(2)} />
-          <StyledTab label="Profile" {...a11yProps(3)} />
+          <StyledTab
+            label="Sign In"
+            {...a11yProps(0)}
+            data-testid="signin-tab"
+          />
+          <StyledTab
+            label="Sign Up"
+            {...a11yProps(1)}
+            data-testid="signup-tab"
+          />
+          <StyledTab
+            label="Forgot Password"
+            {...a11yProps(2)}
+            data-testid="forgot-tab"
+          />
+          <StyledTab
+            label="About Me"
+            {...a11yProps(3)}
+            data-testid="about-tab"
+          />
         </StyledTabs>
       </Box>
       <Box justifyContent={"center"}>
