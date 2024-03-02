@@ -24,14 +24,11 @@ Navigate to the [../my-app-to-test/frontend/cypress/](../../my-app-to-test/front
 
 ### Demo Videos
 
-#### Login test
+Login test source code: [logingTest.cy.js](../../my-app-to-test/frontend/cypress/e2e/loginTest.cy.js)
+Sign up test source code: [signupTest.cy.js](../../my-app-to-test/frontend/cypress/e2e/signupTest.cy.js)
+Forgot password test source code: [forgotPasswordTest.cy.js](../../my-app-to-test/frontend/cypress/e2e/forgotPasswordTest.cy.js)
 
-source code: [logingTest.cy.js](../../my-app-to-test/frontend/cypress/e2e/loginTest.cy.js)
 
-#### Sign up test
 
-source code: [signupTest.cy.js](../../my-app-to-test/frontend/cypress/e2e/signupTest.cy.js)
+https://github.com/justine-black/automagic-testing/assets/78810708/875daf2e-34f4-432a-af04-7b634b711d76
 
-#### Forgot password test
-
-source code: [forgotPasswordTest.cy.js](../../my-app-to-test/frontend/cypress/e2e/forgotPasswordTest.cy.js)
