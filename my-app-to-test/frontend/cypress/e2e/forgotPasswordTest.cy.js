@@ -1,7 +1,4 @@
 describe("Forgot Password Test", () => {
-  before(() => {
-    cy.viewport(1920, 1080);
-  });
   beforeEach(() => {
     cy.visit("https://automagic-test-app.netlify.app/");
     cy.get("button[role='tab']").contains("Forgot Password").click();

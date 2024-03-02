@@ -1,7 +1,4 @@
 describe("Login Test", () => {
-  before(() => {
-    cy.viewport(1920, 1080);
-  });
   beforeEach(() => {
     cy.visit("https://automagic-test-app.netlify.app/");
     cy.get("button[role='tab']").contains("Sign In").click();
