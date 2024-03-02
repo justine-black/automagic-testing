@@ -11,24 +11,21 @@ Here are some resources I found helpful when I was getting started with JavaScri
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Find the official tutorial and documentation here.
 - [Exercism](https://exercism.org/) - Learn JavaScript interactively with fun exercises!
 - [Selenium](https://www.selenium.dev/documentation/webdriver/getting_started/install_library/) - Learn Selenium from its official website.
+- [Cypress](https://docs.cypress.io/guides/cloud/getting-started) - Learn Cypress from its official website.
 - [React](https://react.dev/learn) - Learn ReactJS, one of the most popular JavaScript libraries and web development frameworks.
 
 ## Scripts and Demo Videos
 
-Within this Python directory, you can find the source code for the scripts I authored to demonstrate automation
+Within this JavaScript directory, you can find the source code for the scripts I authored to demonstrate automation
 
 ### Selenium with JavaScript
 
-I've created a few automated test scripts with my practice react app, [Automagic Test App](../my-app-to-test/frontend), as my app under test.
+Selenium is a popular open-source framework for automating web browsers, enabling testers and developers to write scripts for automated testing across browsers and platforms, with support for multiple programming languages and a variety of tools and libraries.
 
-#### Login test
+Navigate to [selenium](selenium) subdirectory for the scripts and demo videos
 
-source code: [loginTest.js](selenium/test/loginTest.js)
+### Cypress
 
-#### Sign up test
+Cypress is a modern JavaScript-based testing framework for end-to-end web testing, offering fast development, execution, and debugging of tests with built-in capabilities like mocking and real-time feedback in its Test Runner interface.
 
-source code: [signupTest.js](selenium/test/signupTest.js)
-
-#### Forgot password test
-
-source code: [forgotPasswordTest.js](selenium/test/forgotPasswordTest.js)
+Navigate to [cypress](cypress) subdirectory for the scripts and demo videos

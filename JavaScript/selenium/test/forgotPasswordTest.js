@@ -6,7 +6,16 @@ describe("Login Test", () => {
   let driver;
 
   before(async () => {
-    driver = await new Builder().forBrowser("chrome").build();
+    driver = await new Builder()
+      .forBrowser("chrome")
+      .setChromeOptions(
+        new chrome.Options().addArguments(
+          // "--headless",
+          "--window-size=1920,1080",
+          "--window-position=0,0"
+        )
+      )
+      .build();
   });
 
   beforeEach(async () => {
