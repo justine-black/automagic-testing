@@ -58,7 +58,7 @@ React.js is a popular JavaScript library known for its efficiency and flexibilit
 
 Navigate to the [my-app-to-test](my-app-to-test/frontend/) subdirectory where you will find a simple web application powered by React.js with Material-UI. I created this app to practice the fundamentals of web development as well as of test automation.
 
-The app is also deployed on Netlify: https://automagic-test-app.netlify.app/
+The app is deployed on Netlify: https://automagic-test-app.netlify.app/
 
 ![image](https://github.com/justine-black/automagic-testing/assets/78810708/b932433e-6072-4226-a1c9-17c597a73551)
 
@@ -67,3 +67,5 @@ The app is also deployed on Netlify: https://automagic-test-app.netlify.app/
 Express.js is a minimalist web framework for Node.js that simplifies the process of building web applications and APIs with its streamlined design and middleware architecture. Its popularity over other frameworks stems from its flexibility, ease of use, and extensive ecosystem of plugins and middleware, allowing developers to quickly create scalable and efficient web applications.
 
 Navigate to the [my-app-to-test/backend](my-app-to-test/backend/) subdirectory where you will find the implementation of the backend application of my [practice react app](my-app-to-test/frontend/).
+
+The app is deployed on Heroku: https://automagic-test-app-backend-044b65bb6129.herokuapp.com/
