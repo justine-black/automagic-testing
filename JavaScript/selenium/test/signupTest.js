@@ -1,4 +1,5 @@
 const { By, Builder, until } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
 const { describe, it, before, beforeEach, after } = require("mocha");
 const assert = require("assert");
 
