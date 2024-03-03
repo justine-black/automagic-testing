@@ -2,6 +2,17 @@
 
 This serves as my personal portfolio, showcasing my experience as a QA Engineer. It specifically highlights my automation skills utilizing various tools, languages, and frameworks.
 
+- [About me](#about-me--justine-bea-o)
+- [What's in here?](#what-s-in-here-)
+  - [Testing / Automation](#testing---automation)
+    - [Postman](#postman)
+    - [Python](#python)
+    - [JavaScript](#javascript)
+    - [Katalon Studio](#katalon-studio)
+  - [Web Development](#web-development)
+    - [React.js](#reactjs)
+    - [Express.js](#expressjs)
+
 # About me, Justine Beaño
 
 I'm an ISTQB-certified QA Engineer with 5 years of experience successfully collaborated with clients from various countries while based in the Philippines, working on different apps across multiple platforms. Throughout my career, I have demonstrated a deep understanding of QA methodologies, testing processes, and automation tools. My hands-on experience in testing web applications, mobile apps, and software products has equipped me with the ability to identify defects, track issues, and collaborate effectively with cross-functional teams to deliver bug-free software solutions.
@@ -50,3 +61,9 @@ Navigate to the [my-app-to-test](my-app-to-test/frontend/) subdirectory where yo
 The app is also deployed on Netlify: https://automagic-test-app.netlify.app/
 
 ![image](https://github.com/justine-black/automagic-testing/assets/78810708/b932433e-6072-4226-a1c9-17c597a73551)
+
+### Express.js
+
+Express.js is a minimalist web framework for Node.js that simplifies the process of building web applications and APIs with its streamlined design and middleware architecture. Its popularity over other frameworks stems from its flexibility, ease of use, and extensive ecosystem of plugins and middleware, allowing developers to quickly create scalable and efficient web applications.
+
+Navigate to the [my-app-to-test/backend](my-app-to-test/backend/) subdirectory where you will find the implementation of the backend application of my [practice react app](my-app-to-test/frontend/).
