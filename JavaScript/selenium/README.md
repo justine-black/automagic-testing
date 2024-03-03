@@ -16,14 +16,11 @@ Navigate to the [/test/](test/) subdirectory to find the selenium scripts for my
 
 ### Demo Videos
 
-#### Login test
+- Login test source code: [loginTest.js](test/loginTest.js)
+- Sign up test source code: [signupTest.js](test/signupTest.js)
+- Forgot password test source code: [forgotPasswordTest.js](test/forgotPasswordTest.js)
 
-source code: [loginTest.js](test/loginTest.js)
 
-#### Sign up test
 
-source code: [signupTest.js](test/signupTest.js)
+https://github.com/justine-black/automagic-testing/assets/78810708/fa7dc693-b647-4d8f-b237-9c071e95fda1
 
-#### Forgot password test
-
-source code: [forgotPasswordTest.js](test/forgotPasswordTest.js)
