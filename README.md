@@ -4,7 +4,7 @@ This serves as my personal portfolio, showcasing my experience as a QA Engineer.
 
 - [About me](#about-me-justine-beaño)
 - [What's in here?](#what-s-in-here-)
-  - [Testing / Automation](#testing---automation)
+  - [Testing / Automation](#testing--automation)
     - [Postman](#postman)
     - [Python](#python)
       - [Selenium](#python)
