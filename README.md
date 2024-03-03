@@ -2,7 +2,7 @@
 
 This serves as my personal portfolio, showcasing my experience as a QA Engineer. It specifically highlights my automation skills utilizing various tools, languages, and frameworks.
 
-- [About me](#about-me--justine-bea-o)
+- [About me](#about-me-justine-beaño)
 - [What's in here?](#what-s-in-here-)
   - [Testing / Automation](#testing---automation)
     - [Postman](#postman)
