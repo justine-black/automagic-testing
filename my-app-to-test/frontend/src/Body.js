@@ -1,4 +1,4 @@
-import { Grid, Paper, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import BasicTabs from "./TestFormTabs";
 
 const Body = () => {
