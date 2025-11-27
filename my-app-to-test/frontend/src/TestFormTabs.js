@@ -43,77 +43,7 @@ function a11yProps(index) {
   };
 }
 
-export function BasicTabs() {
-  const [value, setValue] = React.useState(0);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  const StyledTab = styled(Tab)({
-    textTransform: "none",
-    "&": {
-      color: "white",
-      fontSize: 18,
-    },
-  });
-
-  return (
-    <Box
-      sx={{
-        margin: "0 auto",
-        background: "rgba(255,255,255,0.5)",
-        minHeight: "300px",
-      }}
-    >
-      <Box borderBottom={1} borderColor={"divider"}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="form example tabs"
-          centered
-          sx={{ bgcolor: "#04314c" }}
-        >
-          <StyledTab
-            label="Sign In"
-            {...a11yProps(0)}
-            data-testid="tab-signin"
-          />
-          <StyledTab
-            label="Sign Up"
-            {...a11yProps(1)}
-            data-testid="tab-signup"
-          />
-          <StyledTab
-            label="Forgot Password"
-            {...a11yProps(2)}
-            data-testid="tab-forgot"
-          />
-          <StyledTab
-            label="About Me"
-            {...a11yProps(3)}
-            data-testid="tab-about"
-          />
-        </Tabs>
-      </Box>
-      <Box justifyContent={"center"}>
-        <CustomTabPanel value={value} index={0}>
-          <SignIn handleChange={handleChange} />
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={1}>
-          <SignUp handleChange={handleChange} />
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={2}>
-          <ForgotPassword handleChange={handleChange} />
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={3}>
-          <Profile handleChange={handleChange} />
-        </CustomTabPanel>
-      </Box>
-    </Box>
-  );
-}
-
-export default function NewBasicTabs() {
+export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
